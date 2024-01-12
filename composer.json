@@ -1,0 +1,24 @@
+{
+    "name": "foxworn3365/listdictionaries",
+    "description": "Use arrays and object in PHP as List<T> and Dictionary<T, T> in C# ",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "FoxWorn3365",
+            "email": "foxworn3365@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/FoxWorn3365/ListDictionariesPHP/issues",
+        "wiki": "https://github.com/FoxWorn3365/ListDictionariesPHP/wiki",
+        "docs": "https://github.com/FoxWorn3365/ListDictionariesPHP/wiki"
+    },
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ListDictionariesPHP\\": "src/ListDictionariesPHP"
+        }
+    }
+}
