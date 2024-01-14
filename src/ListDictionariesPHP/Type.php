@@ -10,7 +10,7 @@ namespace ListDictionariesPHP;
 class Type {
     public const STRING = 1;
     public const INT = 2;
-    public const FLAOT = 3;
+    public const FLOAT = 3;
     public const BYTE = 3;
     public const BOOL = 4;
     public const ARRAY = 5;
