@@ -249,4 +249,8 @@ class PHPDictionary implements \IteratorAggregate {
         }
         return $this;
     }
+
+    public function encode() : string {
+        return json_encode($this->data, JSON_UNESCAPED_UNICODE);
+    }
 }
