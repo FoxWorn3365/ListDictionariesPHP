@@ -18,7 +18,7 @@ class PHPDictionary implements \IteratorAggregate {
     public function __construct(string $keytype, string $valuetype, array|object $data) {
         $this->keytype = Type::parser($keytype);
         $this->valuetype = Type::parser($valuetype);
-        if (!self::validateArray($data)) {
+        if (gettype($data) == "array" && !self::validateArray($data)) {
             throw new InvalidArgumentException("Found an invalid argument at PHPList::__construct function, 2nd arg, expecting an object or associative array, got a plain array");
             return;
         }
