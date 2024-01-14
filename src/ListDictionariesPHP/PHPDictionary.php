@@ -260,6 +260,7 @@ class PHPDictionary implements \IteratorAggregate {
 
     public function encode() : string {
         $data = [];
+        var_dump($this->data);
         foreach ($this->data as $key => $value) {
             $data[$key] = $value;
         }
