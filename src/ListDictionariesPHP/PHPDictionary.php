@@ -31,7 +31,7 @@ class PHPDictionary implements \IteratorAggregate {
         $this->data = new \ArrayObject($data);
     }
 
-    public static function new(string $keytype = "mixed", string $valuetype = "mixed", array $data = []) : self {
+    public static function new(string $keytype = "mixed", string $valuetype = "mixed", array|object $data = []) : self {
         return new PHPDictionary($keytype, $valuetype, $data);
     }
 
