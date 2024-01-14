@@ -58,6 +58,10 @@ class PHPDictionary implements \IteratorAggregate {
         return $this->data;
     }
 
+    public function getAll() : object {
+        return $this->getList();
+    }
+
     public function set(mixed $key, mixed $value) : self {
         if (!$this->validate($key, $value)) {
             throw new InvalidArgumentException($this->argError($key, $value));
