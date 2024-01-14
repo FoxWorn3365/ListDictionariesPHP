@@ -191,6 +191,14 @@ class PHPDictionary implements \IteratorAggregate {
         return $contains;
     }
 
+    public function has(mixed $value) : bool {
+        if (!Type::validate($this->keytype, $value)) {
+            throw new InvalidArgumentException("Found an invalid argument at PHPDictionary::has function, expecting " . Type::list($this->keytype) . ", got " . Type::get($value));
+            return false;
+        }
+        return isset($this->data->{$value});
+    }
+
     public function first() : mixed {
         foreach ($this->data as $_k => $value) {
             return $value;
