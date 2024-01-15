@@ -264,10 +264,19 @@ class PHPDictionary implements \IteratorAggregate {
 
     public function encode() : string {
         $data = [];
-        var_dump($this->data);
         foreach ($this->data as $key => $value) {
             $data[$key] = $value;
         }
         return json_encode($data);
+    }
+
+    public function aKeyGet(int $offset) : mixed {
+        $count = 0;
+        foreach ($this->data as $_k => $value) {
+            if ($count == $offset) {
+                return $value;
+            }
+            $count++;
+        }
     }
 }
