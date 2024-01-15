@@ -95,7 +95,7 @@ class PHPDictionary implements \IteratorAggregate {
     public function sort() : self {
         $data = $this->data->getArrayCopy();
         sort($data);
-        $this->data = $data;
+        $this->data = new \ArrayObject($data);
         return $this;
     }
 
@@ -107,28 +107,28 @@ class PHPDictionary implements \IteratorAggregate {
     public function rsort() : self {
         $data = $this->data->getArrayCopy();
         rsort($data);
-        $this->data = $data;
+        $this->data = new \ArrayObject($data);
         return $this;
     }
 
     public function ksort() : self {
         $data = $this->data->getArrayCopy();
         ksort($data);
-        $this->data = $data;
+        $this->data = new \ArrayObject($data);
         return $this;
     }
 
     public function arsort() : self {
         $data = $this->data->getArrayCopy();
         arsort($data);
-        $this->data = $data;
+        $this->data = new \ArrayObject($data);
         return $this;
     }
 
     public function krsort() : self {
         $data = $this->data->getArrayCopy();
         krsort($data);
-        $this->data = $data;
+        $this->data = new \ArrayObject($data);
         return $this;
     }
 
